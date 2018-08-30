@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+
+<f:view
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+>
+	<h:head />
+	<h:body>
+		
+		<h1>Tabla Alumnos</h1>
+		
+		<h:dataTable value="#{alumno.alumnosList}" var="al"
+			styleClass="order-table"
+			headerClass="order-table-header"
+			rowClasses="order-table-add-row,order-table-even-row"
+		>
+		
+			<h:column>
+				<f:facet name="header">IdAlumno</f:facet>
+				#{al.idAlumno}
+			</h:column>
+			
+			<h:column>
+				<f:facet name="header">Nombre</f:facet>
+				#{al.nombre}
+			</h:column>
+			
+			<h:column>
+				<f:facet name="header">Apellidos</f:facet>
+				#{al.apellidos}
+			</h:column>
+			
+			<h:column>
+				<f:facet name="header">DNI</f:facet>
+				#{al.dni}
+			</h:column>
+			
+		</h:dataTable>
+		
+		
+	</h:body>
+</f:view>
